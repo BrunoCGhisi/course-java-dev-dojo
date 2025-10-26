@@ -19,13 +19,11 @@ public class EstudanteIndex {
         estudante02.sexo = 'F';
         estudante02.matriculado = true;
 
-
         metodo.imprimeEstudante(estudante01);
         metodo.isMatriculado(estudante01);
 
         metodo.imprimeEstudante(estudante02);
         metodo.isMatriculado(estudante02);
-
 
 
     }
