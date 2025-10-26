@@ -1,7 +1,0 @@
-package OrientadaObjeto.Aula01Introducao.Model;
-
-public class Pessoa { //Pessoa
-    public String nome;
-    public int idade;
-    public char sexo;
-}

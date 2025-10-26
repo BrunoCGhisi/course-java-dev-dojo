@@ -1,0 +1,13 @@
+package Extras.HackerRank;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class teste {
+    public static void main(String[] args) {
+        List<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+        System.out.println(arr.size());
+    }
+}
