@@ -1,10 +1,10 @@
 package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.Estudante.Model;
 
 public class Estudante {
-        public String nome;
-        public int idade;
-        public char sexo;
-        public boolean matriculado;
+    public String nome;
+    public int idade;
+    public char sexo;
+    public boolean matriculado;
 
 //  Usando o This, pois se for usar metódos dentro do objeto, precisa referenciar com this.
 //        public void imprimirThis(){

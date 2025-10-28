@@ -16,4 +16,12 @@ public class Calculadora {
         }
         return x/2;
     }
+
+    public void somarDoisNumerosVarArgs(int... x){
+        int soma = 0;
+        for (int i : x){
+            soma += i;
+        }
+        System.out.println("Somando: "+ x + "Soma: " +soma);
+    }
 }
