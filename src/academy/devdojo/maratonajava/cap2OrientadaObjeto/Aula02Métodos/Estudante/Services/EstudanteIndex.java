@@ -5,7 +5,7 @@ import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.Estudante
 
 public class EstudanteIndex {
     public static void main(String[] args) {
-        EstudanteMetodos metodo = new EstudanteMetodos();
+        Estudante estudanteMetodos = new Estudante();
 
         Estudante estudante01 = new Estudante();
         estudante01.nome = "Bruno";
@@ -19,12 +19,11 @@ public class EstudanteIndex {
         estudante02.sexo = 'F';
         estudante02.matriculado = true;
 
-        metodo.imprimeEstudante(estudante01);
-        metodo.isMatriculado(estudante01);
+        estudanteMetodos.imprimeEstudante(estudante01);
+        estudanteMetodos.isMatriculado(estudante01);
 
-        metodo.imprimeEstudante(estudante02);
-        metodo.isMatriculado(estudante02);
-
+        estudanteMetodos.imprimeEstudante(estudante02);
+        estudanteMetodos.isMatriculado(estudante02);
 
     }
 }
