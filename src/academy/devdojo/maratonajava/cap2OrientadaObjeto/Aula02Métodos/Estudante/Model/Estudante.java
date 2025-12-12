@@ -20,6 +20,7 @@ public class Estudante {
         String statusMatricula = estudante.matriculado ? "Matriculado" : "Não matriculado";
         System.out.println(estudante.nome + " Status: " + statusMatricula);
     }
+
 }
 
 
