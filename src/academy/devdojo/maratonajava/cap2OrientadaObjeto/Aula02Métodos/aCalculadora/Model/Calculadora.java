@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.Calculadora.Model;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.aCalculadora.Model;
 
 public class Calculadora {
     public void somarDoisNumeros(){

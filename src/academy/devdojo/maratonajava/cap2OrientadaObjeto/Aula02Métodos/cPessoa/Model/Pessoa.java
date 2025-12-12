@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.Pessoa.Model;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.cPessoa.Model;
 
 public class Pessoa {
     private String nome;

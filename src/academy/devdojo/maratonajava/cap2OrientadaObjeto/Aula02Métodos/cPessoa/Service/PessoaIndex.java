@@ -1,7 +1,7 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.Pessoa.Service;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.cPessoa.Service;
 
 
-import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.Pessoa.Model.Pessoa;
+import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.cPessoa.Model.Pessoa;
 
 
 public class PessoaIndex {
