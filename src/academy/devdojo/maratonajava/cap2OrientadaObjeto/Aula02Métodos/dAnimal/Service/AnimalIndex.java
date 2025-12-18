@@ -6,11 +6,11 @@ public class AnimalIndex {
     public static void main(String[] args) {
         Animal tucano = new Animal();
         tucano.setEspecie("Tucano");
-        tucano.setQuantidade(2);
-        tucano.setCapacidadeReprodutiva(2);
+        tucano.setQuantidade(10);
+        tucano.setCapacidadeReprodutiva(3);
         tucano.setIsSexuado("Sim");
-        tucano.exiberFicha();
+        tucano.exibirFicha();
 
-
+        tucano.reproduzir(4);
     }
 }

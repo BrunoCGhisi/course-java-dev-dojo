@@ -7,7 +7,7 @@ public class Animal {
     private boolean isSexuado;
     private boolean extinto;
 
-    public void exiberFicha()
+    public void exibirFicha()
     {
         System.out.println("Espécie: " + especie);
         System.out.println("Quantidade: " + quantidade);
@@ -32,6 +32,36 @@ public class Animal {
     public void setIsSexuado(String isSexuado) {
         isSexuado = isSexuado.toLowerCase();
         this.isSexuado = isSexuado.equals("sim");
+    }
+
+    public void reproduzir(int especimesReproduzir){
+
+        if (this.extinto){
+            System.out.println("Não é possível se reproduzir, todos morreram. /: ");
+        }
+        else{
+            if (isSexuado){ //isSexuado True
+                if (this.quantidade == 1){
+                    System.out.println("Não é possível reproduzir com apenas 1 espécime");
+                }
+                else{
+                    reproducaoSexuada(especimesReproduzir/2);
+                }
+            }
+            else { //isSexuado False
+                reproducaoAssexuada(especimesReproduzir);
+            }
+        }
+    }
+
+    private void reproducaoSexuada(int x){
+        this.quantidade = this.quantidade+(this.capacidadeReprodutiva*(x/2));
+        System.out.println("Nova Quantidade: " + this.quantidade);
+    }
+
+    private void reproducaoAssexuada(int x){
+        this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
+        System.out.println("Nova Quantidade: " + this.quantidade);
     }
 
 
