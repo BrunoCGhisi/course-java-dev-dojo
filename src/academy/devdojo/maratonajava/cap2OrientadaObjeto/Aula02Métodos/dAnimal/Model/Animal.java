@@ -40,7 +40,7 @@ public class Animal {
         this.isSexuado = isSexuado.equals("sim");
     }
 
-    public void divider(){
+    public static void divider(){
         System.out.println("*******************************************");
     }
 
@@ -95,11 +95,17 @@ public class Animal {
     }
 
     public static void getVivos(List<Animal> animais){
+        System.out.println("ANIMAIS NÃO EXTINTOS: ");
 
-        List<Animal> animaisVivos = animais.stream()
+        List<String> animaisVivos = animais.stream()
                 .filter(animal -> !animal.extinto)
+                .map(animal -> animal.especie)
                 .collect(Collectors.toList());
-        System.out.println(animaisVivos);
+        for(String animal: animaisVivos){
+            System.out.println("Animal não Extinto: " + animal);
+        }
+        divider();
+
     }
 
 

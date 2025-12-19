@@ -28,16 +28,16 @@ public class AnimalIndex {
         raposa.setIsSexuado("Sim");
 
         Animal planaria = new Animal();
-        planaria.setEspecie("Planária");
+        planaria.setEspecie("Planaria");
         planaria.setQuantidade(79);
         planaria.setCapacidadeReprodutiva(5);
         planaria.setIsSexuado("Não");
 
         Animal dodo = new Animal();
-        planaria.setEspecie("Dodô");
-        planaria.setQuantidade(0);
-        planaria.setCapacidadeReprodutiva(1);
-        planaria.setIsSexuado("Sim");
+        dodo.setEspecie("Dodô");
+        dodo.setQuantidade(0);
+        dodo.setCapacidadeReprodutiva(1);
+        dodo.setIsSexuado("Sim");
 
         animais.add(tucano);
         animais.add(raposa);
@@ -45,5 +45,6 @@ public class AnimalIndex {
         animais.add(dodo);
 
         Animal.getVivos(animais);
+        planaria.exibirFicha();
     }
 }
