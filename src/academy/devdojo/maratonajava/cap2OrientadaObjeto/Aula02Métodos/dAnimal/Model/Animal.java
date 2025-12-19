@@ -1,5 +1,9 @@
 package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.dAnimal.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Animal {
     private String especie;
     private int quantidade;
@@ -16,7 +20,6 @@ public class Animal {
         System.out.println("Tipo de Reprodução: " + (isSexuado ? "Sexuado" : "Assexuado"));
         System.out.println("Extinto: " + (extinto ? "Extinto" : "Na natureza"));
         divider();
-
     }
 
     public void setEspecie(String especie) {
@@ -89,12 +92,15 @@ public class Animal {
         System.out.println("Você utilizou para experimentos: "+ x + " de "+ this.especie);
         this.quantidade = this.quantidade - x;
         getNewQuantidade();
-
-
     }
 
+    public static void getVivos(List<Animal> animais){
 
-
+        List<Animal> animaisVivos = animais.stream()
+                .filter(animal -> !animal.extinto)
+                .collect(Collectors.toList());
+        System.out.println(animaisVivos);
+    }
 
 
 
