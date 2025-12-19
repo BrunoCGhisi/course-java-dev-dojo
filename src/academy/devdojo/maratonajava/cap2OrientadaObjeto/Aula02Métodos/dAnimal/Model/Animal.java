@@ -1,7 +1,9 @@
 package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.dAnimal.Model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Animal {
@@ -41,7 +43,7 @@ public class Animal {
     }
 
     public static void divider(){
-        System.out.println("*******************************************");
+        System.out.println("*********************************************");
     }
 
     public void getNewQuantidade(){
@@ -105,6 +107,21 @@ public class Animal {
             System.out.println("Animal não Extinto: " + animal);
         }
         divider();
+    }
+
+    public static void getQuantidadeTotal(List<Animal> animais){
+        System.out.println("TOTAL DE ANIMAIS: ");
+
+        Map<String, Integer> animaisTotal = animais.stream()
+                .collect(Collectors.toMap(
+                        animal -> animal.especie,
+                        animal -> animal.quantidade
+                ));
+
+        animaisTotal.forEach((animal, quantidade) ->{
+            System.out.println(animal + ": " + quantidade);
+        });
+
 
     }
 

@@ -46,5 +46,7 @@ public class AnimalIndex {
 
         Animal.getVivos(animais);
         planaria.exibirFicha();
+
+        Animal.getQuantidadeTotal(animais);
     }
 }
