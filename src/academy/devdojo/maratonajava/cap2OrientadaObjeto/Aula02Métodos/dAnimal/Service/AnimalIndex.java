@@ -12,5 +12,6 @@ public class AnimalIndex {
         tucano.exibirFicha();
 
         tucano.reproduzir(5);
+        tucano.utilizarCobaias(2);
     }
 }

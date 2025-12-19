@@ -9,11 +9,14 @@ public class Animal {
 
     public void exibirFicha()
     {
+        System.out.println("FICHA DO "+ this.especie);
         System.out.println("Espécie: " + especie);
         System.out.println("Quantidade: " + quantidade);
         System.out.println("CapacidadeReprodutiva: " + capacidadeReprodutiva);
         System.out.println("Tipo de Reprodução: " + (isSexuado ? "Sexuado" : "Assexuado"));
         System.out.println("Extinto: " + (extinto ? "Extinto" : "Na natureza"));
+        divider();
+
     }
 
     public void setEspecie(String especie) {
@@ -34,17 +37,27 @@ public class Animal {
         this.isSexuado = isSexuado.equals("sim");
     }
 
-    public void reproduzir(int especimesReproduzir){
+    public void divider(){
+        System.out.println("*******************************************");
+    }
 
+    public void getNewQuantidade(){
+        System.out.println("Quantidade: " + quantidade);
+        divider();
+
+    }
+
+    public void reproduzir(int especimesReproduzir){
         if (this.extinto){
             System.out.println("Não é possível se reproduzir, todos morreram. /: ");
+            divider();
         }
         else{
             if (isSexuado){ //isSexuado True
                 if (this.quantidade == 1){
                     System.out.println("Não é possível reproduzir com apenas 1 espécime");
                 }
-                else{
+                else {
                     System.out.println(especimesReproduzir/2);
                     reproducaoSexuada(especimesReproduzir/2);
                 }
@@ -56,15 +69,33 @@ public class Animal {
     }
 
     private void reproducaoSexuada(int x){
-        System.out.println(this.quantidade + " " + this.quantidade + " + (" + this.capacidadeReprodutiva + "*" + x);
+        System.out.println("Espécie: " + this.especie +
+                 "\nTotal de Acasalamento(s): " + x);
         this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
-        System.out.println("Nova Quantidade: " + this.quantidade);
+        getNewQuantidade();
+
     }
 
     private void reproducaoAssexuada(int x){
+        System.out.println("Espécie: " + this.especie +
+                "\nTotal de Acasalamento(s): " + x +
+                "\nCapacidade Reprodutiva Casal: " + this.capacidadeReprodutiva);
         this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
-        System.out.println("Nova Quantidade: " + this.quantidade);
+        getNewQuantidade();
+
     }
+
+    public void utilizarCobaias(int x){
+        System.out.println("Você utilizou para experimentos: "+ x + " de "+ this.especie);
+        this.quantidade = this.quantidade - x;
+        getNewQuantidade();
+
+
+    }
+
+
+
+
 
 
 
