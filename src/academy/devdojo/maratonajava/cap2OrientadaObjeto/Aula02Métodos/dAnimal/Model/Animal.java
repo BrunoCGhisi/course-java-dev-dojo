@@ -45,6 +45,7 @@ public class Animal {
                     System.out.println("Não é possível reproduzir com apenas 1 espécime");
                 }
                 else{
+                    System.out.println(especimesReproduzir/2);
                     reproducaoSexuada(especimesReproduzir/2);
                 }
             }
@@ -55,7 +56,8 @@ public class Animal {
     }
 
     private void reproducaoSexuada(int x){
-        this.quantidade = this.quantidade+(this.capacidadeReprodutiva*(x/2));
+        System.out.println(this.quantidade + " " + this.quantidade + " + (" + this.capacidadeReprodutiva + "*" + x);
+        this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
         System.out.println("Nova Quantidade: " + this.quantidade);
     }
 

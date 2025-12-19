@@ -7,10 +7,10 @@ public class AnimalIndex {
         Animal tucano = new Animal();
         tucano.setEspecie("Tucano");
         tucano.setQuantidade(10);
-        tucano.setCapacidadeReprodutiva(3);
+        tucano.setCapacidadeReprodutiva(4);
         tucano.setIsSexuado("Sim");
         tucano.exibirFicha();
 
-        tucano.reproduzir(4);
+        tucano.reproduzir(5);
     }
 }
