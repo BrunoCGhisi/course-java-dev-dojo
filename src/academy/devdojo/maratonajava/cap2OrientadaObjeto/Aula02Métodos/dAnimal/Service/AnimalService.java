@@ -5,7 +5,7 @@ import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.dAnimal.M
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnimalIndex {
+public class AnimalService {
     public static void main(String[] args) {
         List<Animal> animais = new ArrayList<>();
 
