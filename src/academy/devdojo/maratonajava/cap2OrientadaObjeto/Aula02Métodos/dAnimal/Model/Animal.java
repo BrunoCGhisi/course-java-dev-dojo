@@ -20,7 +20,7 @@ public class Animal {
         System.out.println("Quantidade: " + quantidade);
         System.out.println("CapacidadeReprodutiva: " + capacidadeReprodutiva);
         System.out.println("Tipo de Reprodução: " + (isSexuado ? "Sexuado" : "Assexuado"));
-        System.out.println("Extinto: " + (extinto ? "Extinto" : "Na natureza"));
+        System.out.println("Lista Vermelha: " + (extinto ? "Extinto" : "Na natureza"));
         divider();
     }
 
@@ -122,7 +122,18 @@ public class Animal {
             System.out.println(animal + ": " + quantidade);
         });
 
+        divider();
+    }
 
+    public static void getSumQuantidade(List<Animal> animais){
+        System.out.println("MONTANTE TOTAL DE QUANTIDADE ANIMAIS: ");
+
+        int montanteQuantidade = animais.stream()
+                .mapToInt(animal -> animal.quantidade)
+                .sum();
+
+        System.out.println(montanteQuantidade + "animais em seu cativeiro");
+        divider();
     }
 
 

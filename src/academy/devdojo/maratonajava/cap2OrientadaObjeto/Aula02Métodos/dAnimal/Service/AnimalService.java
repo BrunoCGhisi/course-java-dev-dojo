@@ -48,5 +48,6 @@ public class AnimalService {
         planaria.exibirFicha();
 
         Animal.getQuantidadeTotal(animais);
+        Animal.getSumQuantidade(animais);
     }
 }
