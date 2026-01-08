@@ -5,6 +5,6 @@ import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.dAn
 public class Platelminto extends Animal {
     @Override
     public void reproduzir(int especimesReproduzir){
-
+        System.out.println("Reproduzindo");
     }
 }
