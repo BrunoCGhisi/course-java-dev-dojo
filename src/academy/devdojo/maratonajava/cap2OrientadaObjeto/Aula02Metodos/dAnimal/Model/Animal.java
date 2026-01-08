@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Animal {
+public abstract class Animal {
     protected String especie;
     protected int quantidade;
     protected int capacidadeReprodutiva;
@@ -43,14 +43,16 @@ public class Animal {
 
     }
 
+    public abstract void reproduzir(int x);
+
     /*
-    public void reproduzir(int especimesReproduzir){
-        if (this.extinto){
+    Public void reproduzir(int espécimesReproduzir){
+    if (this.extinto){
             System.out.println("Não é possível se reproduzir, todos morreram. /: ");
             divider();
         }
         else{
-            if (isSexuado){ //isSexuado True
+            if (isSexuado) { //isSexuado True
                 if (this.quantidade == 1){
                     System.out.println("Não é possível reproduzir com apenas 1 espécime");
                 }
@@ -76,7 +78,7 @@ public class Animal {
     private void reproducaoAssexuada(int x){
         System.out.println("Espécie: " + this.especie +
                 "\nTotal de Acasalamento(s): " + x +
-                "\nCapacidade Reprodutiva Casal: " + this.capacidadeReprodutiva);
+                "\nCapacidade ReprodutivaCasal :" + this.capacidadeReprodutiva);
         this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
         getNewQuantidade();
 

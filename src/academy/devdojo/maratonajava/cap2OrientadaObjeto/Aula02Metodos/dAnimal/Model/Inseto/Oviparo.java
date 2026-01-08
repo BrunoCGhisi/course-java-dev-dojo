@@ -2,8 +2,9 @@ package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.dAnimal.M
 
 import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.dAnimal.Model.Animal;
 
-public class Inseto extends Animal {
-    private int reproduzir(int x){
-        return x;
+public class Oviparo extends Animal {
+    @Override
+    public void reproduzir(int especimesReproduzir){
+
     }
 }

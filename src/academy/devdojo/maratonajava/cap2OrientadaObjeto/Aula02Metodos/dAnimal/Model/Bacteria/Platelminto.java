@@ -2,9 +2,9 @@ package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.dAnimal.M
 
 import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.dAnimal.Model.Animal;
 
-public class Bacteria extends Animal {
-    private int reproduzir(int x){
+public class Platelminto extends Animal {
+    @Override
+    public void reproduzir(int especimesReproduzir){
 
-        return x;
     }
 }
