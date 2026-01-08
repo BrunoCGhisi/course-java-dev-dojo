@@ -1,6 +1,6 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.aCalculadora.Services;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.aCalculadora.Services;
 
-import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.aCalculadora.Model.Calculadora;
+import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.aCalculadora.Model.Calculadora;
 
 public class CalculadoraTeste {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.bEstudante.Services;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.bEstudante.Services;
 
 
-import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.bEstudante.Model.Estudante;
+import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.bEstudante.Model.Estudante;
 
 public class EstudanteIndex {
     public static void main(String[] args) {
