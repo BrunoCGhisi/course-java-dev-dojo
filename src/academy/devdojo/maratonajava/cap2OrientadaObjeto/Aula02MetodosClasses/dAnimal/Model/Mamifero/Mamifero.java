@@ -4,6 +4,8 @@ import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.dAn
 
 public class Mamifero extends Animal {
 
+    private int femeasRepouso;
+
     @Override
     public void reproduzir(int especimesReproduzir){
         if (this.extinto || this.quantidade < 2 || especimesReproduzir < 2){
@@ -11,8 +13,10 @@ public class Mamifero extends Animal {
         }
         else{
             especimesReproduzir = especimesReproduzir / 2;
+            this.femeasRepouso = especimesReproduzir/2;
             this.quantidade = this.quantidade+(especimesReproduzir*this.capacidadeReprodutiva);
-            System.out.println(this.quantidade);
+            System.out.println("Nova população: " + this.quantidade);
+            System.out.println("Mães em Descanso: " + this.femeasRepouso);
         }
     }
 }
