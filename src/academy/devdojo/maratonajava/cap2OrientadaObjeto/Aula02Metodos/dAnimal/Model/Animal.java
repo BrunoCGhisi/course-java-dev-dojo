@@ -1,17 +1,14 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.dAnimal.Model;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.dAnimal.Model;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Animal {
-    private String especie;
-    private int quantidade;
-    private int capacidadeReprodutiva;
-    private boolean isSexuado;
-    private boolean extinto;
+    protected String especie;
+    protected int quantidade;
+    protected int capacidadeReprodutiva;
+    protected boolean extinto;
 
     public void exibirFicha()
     {
@@ -19,7 +16,6 @@ public class Animal {
         System.out.println("Espécie: " + especie);
         System.out.println("Quantidade: " + quantidade);
         System.out.println("CapacidadeReprodutiva: " + capacidadeReprodutiva);
-        System.out.println("Tipo de Reprodução: " + (isSexuado ? "Sexuado" : "Assexuado"));
         System.out.println("Lista Vermelha: " + (extinto ? "Extinto" : "Na natureza"));
         divider();
     }
@@ -37,11 +33,6 @@ public class Animal {
         this.capacidadeReprodutiva = capacidadeReprodutiva;
     }
 
-    public void setIsSexuado(String isSexuado) {
-        isSexuado = isSexuado.toLowerCase();
-        this.isSexuado = isSexuado.equals("sim");
-    }
-
     public static void divider(){
         System.out.println("*********************************************");
     }
@@ -52,6 +43,7 @@ public class Animal {
 
     }
 
+    /*
     public void reproduzir(int especimesReproduzir){
         if (this.extinto){
             System.out.println("Não é possível se reproduzir, todos morreram. /: ");
@@ -90,6 +82,7 @@ public class Animal {
 
     }
 
+    */
     public void utilizarCobaias(int x){
         System.out.println("Você utilizou para experimentos: "+ x + " de "+ this.especie);
         this.quantidade = this.quantidade - x;
@@ -125,19 +118,15 @@ public class Animal {
         divider();
     }
 
-    public static void getSumQuantidade(List<Animal> animais){
+    public static void sumQuantidade(List<Animal> animais){
         System.out.println("MONTANTE TOTAL DE QUANTIDADE ANIMAIS: ");
 
         int montanteQuantidade = animais.stream()
                 .mapToInt(animal -> animal.quantidade)
                 .sum();
 
-        System.out.println(montanteQuantidade + "animais em seu cativeiro");
+        System.out.println(montanteQuantidade + " animais em seu cativeiro");
         divider();
     }
 
-
-
-
 }
-

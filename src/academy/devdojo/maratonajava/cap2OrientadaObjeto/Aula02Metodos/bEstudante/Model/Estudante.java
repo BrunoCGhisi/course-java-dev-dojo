@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Métodos.bEstudante.Model;
+package academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02Metodos.bEstudante.Model;
 
 public class Estudante {
     public String nome;
