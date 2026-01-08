@@ -15,9 +15,11 @@ public class Mamifero extends Animal {
         else{
             especimesReproduzir = especimesReproduzir / 2;
             this.femeasRepouso = especimesReproduzir;
+            this.dispostosAcasalamento = this.quantidade - especimesReproduzir;
             this.quantidade = this.quantidade+(especimesReproduzir*this.capacidadeReprodutiva);
             System.out.println("Nova população: " + this.quantidade);
             System.out.println("Mães em Descanso: " + this.femeasRepouso);
+            System.out.println("Dispostos a Acasalar: " + this.dispostosAcasalamento);
         }
     }
 }
