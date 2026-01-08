@@ -10,6 +10,8 @@ public abstract class Animal {
     protected int capacidadeReprodutiva;
     protected boolean extinto;
 
+    public abstract void reproduzirSexuado(int x);
+
     public void exibirFicha()
     {
         System.out.println("FICHA DO "+ this.especie);
@@ -43,48 +45,6 @@ public abstract class Animal {
 
     }
 
-    public abstract void reproduzir(int x);
-
-    /*
-    Public void reproduzir(int espécimesReproduzir){
-    if (this.extinto){
-            System.out.println("Não é possível se reproduzir, todos morreram. /: ");
-            divider();
-        }
-        else{
-            if (isSexuado) { //isSexuado True
-                if (this.quantidade == 1){
-                    System.out.println("Não é possível reproduzir com apenas 1 espécime");
-                }
-                else {
-                    System.out.println(especimesReproduzir/2);
-                    reproducaoSexuada(especimesReproduzir/2);
-                }
-            }
-            else { //isSexuado False
-                reproducaoAssexuada(especimesReproduzir);
-            }
-        }
-    }
-
-    private void reproducaoSexuada(int x){
-        System.out.println("Espécie: " + this.especie +
-                 "\nTotal de Acasalamento(s): " + x);
-        this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
-        getNewQuantidade();
-
-    }
-
-    private void reproducaoAssexuada(int x){
-        System.out.println("Espécie: " + this.especie +
-                "\nTotal de Acasalamento(s): " + x +
-                "\nCapacidade ReprodutivaCasal :" + this.capacidadeReprodutiva);
-        this.quantidade = this.quantidade+(this.capacidadeReprodutiva*x);
-        getNewQuantidade();
-
-    }
-
-    */
     public void utilizarCobaias(int x){
         System.out.println("Você utilizou para experimentos: "+ x + " de "+ this.especie);
         this.quantidade = this.quantidade - x;

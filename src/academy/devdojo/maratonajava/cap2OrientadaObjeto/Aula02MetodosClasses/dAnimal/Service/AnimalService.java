@@ -17,11 +17,6 @@ public class AnimalService {
         tucano.setQuantidade(10);           //int
         tucano.setCapacidadeReprodutiva(3); //int
 
-        //isExtinto automated by quantidade //boolean
-        tucano.exibirFicha();
-
-        // tucano.utilizarCobaias(2);
-
         Animal raposa = new Mamifero();
         raposa.setEspecie("Raposa");
         raposa.setQuantidade(10);
@@ -42,13 +37,30 @@ public class AnimalService {
         animais.add(planaria);
         animais.add(dodo);
 
+        Animal.divider();
+        /*
         Animal.getVivos(animais);
-        planaria.exibirFicha();
+        isExtinto automated by quantidade //boolean
+        tucano.exibirFicha();
 
+        tucano.utilizarCobaias(2);
         Animal.getQuantidadeTotal(animais);
         Animal.sumQuantidade(animais);
+        */
 
-        raposa.reproduzir(5);
+        tucano.reproduzirSexuado(2);
+
+        raposa.reproduzirSexuado(5);
+        raposa.reproduzirSexuado(2);
+        raposa.reproduzirSexuado(2);
+
+
+
+
+
+
+
+
 
 
     }

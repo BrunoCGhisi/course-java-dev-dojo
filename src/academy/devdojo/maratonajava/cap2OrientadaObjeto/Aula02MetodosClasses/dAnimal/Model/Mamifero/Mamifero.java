@@ -4,22 +4,27 @@ import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.dAn
 
 public class Mamifero extends Animal {
 
-    private int femeasRepouso;
-    private int dispostosAcasalamento;
+    private int emDescanso = 0;
 
     @Override
-    public void reproduzir(int especimesReproduzir){
-        if (this.extinto || this.quantidade < 2 || especimesReproduzir < 2){
-            System.out.println("O animal não tem população suficiente ): ");
+    public void reproduzirSexuado(int especimesReproduzir){
+        int disponivelAcasalar = this.quantidade - especimesReproduzir;
+
+        if (!this.extinto && this.quantidade > 1 && especimesReproduzir > 1 && disponivelAcasalar < especimesReproduzir){
+            int casais = especimesReproduzir / 2;
+            this.emDescanso = casais;
+
+            this.quantidade = this.quantidade+(casais*this.capacidadeReprodutiva);
+            System.out.println("Cada casal ("+ casais +") de " + this.especie + " reproduziu "+ this.capacidadeReprodutiva);
+            System.out.println("Nova população: " + this.quantidade);
+            System.out.println("Mães em Descanso: " + this.emDescanso);
+            divider();
+
         }
         else{
-            especimesReproduzir = especimesReproduzir / 2;
-            this.femeasRepouso = especimesReproduzir;
-            this.dispostosAcasalamento = this.quantidade - especimesReproduzir;
-            this.quantidade = this.quantidade+(especimesReproduzir*this.capacidadeReprodutiva);
-            System.out.println("Nova população: " + this.quantidade);
-            System.out.println("Mães em Descanso: " + this.femeasRepouso);
-            System.out.println("Dispostos a Acasalar: " + this.dispostosAcasalamento);
+            System.out.println("O animal não tem população suficiente :/ ");
         }
     }
+
+
 }
