@@ -7,7 +7,6 @@ public class Platelminto extends Animal implements ReprodutorAssexuado {
 
     @Override
     public void reproduzirSexuado(int especimesReproduzir){
-
         if (!this.extinto && this.quantidade > 1 && especimesReproduzir > 1 ){
             int casais = especimesReproduzir / 2;
 

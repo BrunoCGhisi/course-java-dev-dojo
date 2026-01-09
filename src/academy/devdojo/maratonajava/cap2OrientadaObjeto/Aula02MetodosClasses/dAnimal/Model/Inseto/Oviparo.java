@@ -4,17 +4,34 @@ import academy.devdojo.maratonajava.cap2OrientadaObjeto.Aula02MetodosClasses.dAn
 
 public class Oviparo extends Animal {
 
+    int emOvos = 0;
+
+
     @Override
     public void reproduzirSexuado(int especimesReproduzir){
-        if (this.extinto || this.quantidade < 2 || especimesReproduzir < 2){
-            System.out.println("O animal não tem população suficiente ): ");
+        int casais = especimesReproduzir / 2;
+        if (emOvos == 0 && !this.extinto && this.quantidade > 1 && especimesReproduzir > 1){
+
+            this.emOvos = casais*this.capacidadeReprodutiva;
+            System.out.println("Cada casal ("+ casais +") de " + this.especie + " botou ovos: "+ this.capacidadeReprodutiva);
+            System.out.println("Nova população: " + this.quantidade);
+            System.out.println("Ovos a chocar: " + this.emOvos);
+        }
+
+        else if (!this.extinto && this.quantidade > 1 && especimesReproduzir > 1){
+            this.quantidade =+ this.emOvos;
+            this.emOvos = casais*this.capacidadeReprodutiva;
+            System.out.println("Cada casal ("+ casais +") de " + this.especie + " botou ovos:  "+ this.capacidadeReprodutiva);
+            System.out.println("Nova população: " + this.quantidade);
+            System.out.println("Ovos a chocar: " + this.emOvos);
+
         }
         else{
-            especimesReproduzir = especimesReproduzir / 2;
-            this.quantidade = this.quantidade+(especimesReproduzir*this.capacidadeReprodutiva);
-            System.out.println("Cada casal ("+ especimesReproduzir +") de " + this.especie + " reproduziu "+ this.capacidadeReprodutiva);
-            System.out.println("Nova população: " + this.quantidade);
-            divider();
+            System.out.println("O animal não tem população suficiente :/ ");
         }
+        divider();
+
     }
+
+
 }

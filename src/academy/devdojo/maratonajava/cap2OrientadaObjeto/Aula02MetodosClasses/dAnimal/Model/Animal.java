@@ -15,9 +15,9 @@ public abstract class Animal {
     public void exibirFicha()
     {
         System.out.println("FICHA DO "+ this.especie);
-        System.out.println("Espécie: " + especie);
-        System.out.println("Quantidade: " + quantidade);
-        System.out.println("CapacidadeReprodutiva: " + capacidadeReprodutiva);
+        System.out.println("Espécie: " + this.especie);
+        System.out.println("Quantidade: " + this.quantidade);
+        System.out.println("CapacidadeReprodutiva: " + this.capacidadeReprodutiva);
         System.out.println("Lista Vermelha: " + (extinto ? "Extinto" : "Na natureza"));
         divider();
     }
@@ -42,7 +42,6 @@ public abstract class Animal {
     public void getNewQuantidade(){
         System.out.println("Quantidade: " + quantidade);
         divider();
-
     }
 
     public void utilizarCobaias(int x){
