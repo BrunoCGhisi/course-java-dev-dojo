@@ -18,7 +18,7 @@ public class Oviparo extends Animal {
             System.out.println("Ovos a chocar: " + this.emOvos);
         }
 
-        else if (!this.extinto && this.quantidade > 1 && especimesReproduzir > 1){
+        else if (emOvos > 0 && !this.extinto && this.quantidade > 1 && especimesReproduzir > 1){
             this.quantidade =+ this.emOvos;
             this.emOvos = casais*this.capacidadeReprodutiva;
             System.out.println("Cada casal ("+ casais +") de " + this.especie + " botou ovos:  "+ this.capacidadeReprodutiva);
